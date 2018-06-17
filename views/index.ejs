@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title> Display Text </title>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="text-center">
+  <br><br>
+  <h1><b>Display Text</b></h1>
+  <br><br>
+  <form action = "/quotes" method="post">
+    <input type="text" placeholder = "Add the content (max 500 chars)" name = "content" class = "form-control form-control-lg center-block" style="width:67%;"  maxlength="500">
+    <br><br>
+    <input type="number" placeholder = "Speed (Range: 1 to 5)" name = "speed" class = "form-control form-control-lg center-block" style="width:40%;" min="1" max="5">
+    <br> <br>
+    <button type="submit" class="btn btn-success" style="width:23%;"> Submit </button>
+  </form>
+  <br> <br> <br> <br> <br>
+
+  <p> The display will show :<b> <%= content[content.length - 1].content %> </b> at a speed of <b> <%= content[content.length - 1].speed %> </b>.
+</div>
+
+  <!-- <b>
+    <p> <%= content[content.length - 1].content %> </p>
+    <p> <%= content[content.length - 1].speed %> </p>
+  </b> -->
+
+</body>
+</html>
